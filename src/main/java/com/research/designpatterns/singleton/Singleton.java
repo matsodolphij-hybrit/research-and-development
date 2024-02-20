@@ -1,5 +1,7 @@
 package com.research.designpatterns.singleton;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * Singleton is a creational design pattern that lets you ensure that a class has only one instance,
  * while providing a global access point to this instance.
@@ -11,6 +13,7 @@ package com.research.designpatterns.singleton;
  * Information:
  * <a href="https://refactoring.guru/design-patterns/singleton">Singleton guru</a>
  */
+@Slf4j
 public class Singleton {
 
     private final String message = "Somethong is Done.";
@@ -24,7 +27,7 @@ public class Singleton {
      */
     public synchronized static Singleton getInstance() {
         if (singleton == null) {
-            System.out.println("Singleton has been instantiated.");
+            log.atInfo().log("Singleton has been instantiated.");
             singleton = new Singleton();
         }
         return singleton;

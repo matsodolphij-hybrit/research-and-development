@@ -5,6 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.research.designpatterns.singleton.Singleton;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @SpringBootApplication
 public class ResearchApplication {
 
@@ -12,7 +15,7 @@ public class ResearchApplication {
 		SpringApplication.run(ResearchApplication.class, args);
 
 		final Singleton singleton = Singleton.getInstance();
-		System.out.println(singleton.getMessage());
+		log.atInfo().log(singleton.getMessage());
 	}
 
 }
