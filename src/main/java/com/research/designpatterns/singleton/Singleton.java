@@ -15,7 +15,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class Singleton {
 
-    private final String message = "Somethong is Done.";
+    private final String message = "This is a singleton message.";
     private static Singleton singleton;
 
     private Singleton() {
