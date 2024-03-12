@@ -7,6 +7,10 @@ import com.research.designpatterns.adapter.Helicopter;
 import com.research.designpatterns.adapter.HelicopterAdapter;
 import com.research.designpatterns.adapter.Minivan;
 import com.research.designpatterns.adapter.Vehicle;
+import com.research.designpatterns.decorator.Mozzarella;
+import com.research.designpatterns.decorator.Pizza;
+import com.research.designpatterns.decorator.PlainPizza;
+import com.research.designpatterns.decorator.TomatoSauce;
 import com.research.designpatterns.factory.Car;
 import com.research.designpatterns.factory.Golf;
 import com.research.designpatterns.factory.Polo;
@@ -19,10 +23,10 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @SpringBootApplication
-public class ResearchApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ResearchApplication.class, args);
+		SpringApplication.run(Application.class, args);
 
 		log.atInfo().log("---------- singleton pattern ----------");
 		testSingleton();
@@ -32,6 +36,8 @@ public class ResearchApplication {
 		testAdapter();
 		log.atInfo().log("---------- strategy pattern ----------");
 		testStrategyPattern();
+		log.atInfo().log("---------- decorator pattern ----------");
+		testDecoratorPattern();
 	}
 
 	static void testSingleton() {
@@ -82,6 +88,11 @@ public class ResearchApplication {
 
 		log.atInfo().log("The boat {}", boat.tryingToFly());
 		log.atInfo().log("The plane {}", plane.tryingToFly());
+	}
+
+	static void testDecoratorPattern() {
+		final Pizza pizza = new Mozzarella(new TomatoSauce(new PlainPizza()));
+		log.atInfo().log(pizza.getDescription());
 	}
 
 
