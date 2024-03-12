@@ -12,6 +12,8 @@ import com.research.designpatterns.factory.Golf;
 import com.research.designpatterns.factory.Polo;
 import com.research.designpatterns.factory.VolkswagenFactory;
 import com.research.designpatterns.singleton.Singleton;
+import com.research.designpatterns.strategy.Boat;
+import com.research.designpatterns.strategy.CargoPlane;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -22,11 +24,14 @@ public class ResearchApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ResearchApplication.class, args);
 
-
+		log.atInfo().log("---------- singleton pattern ----------");
 		testSingleton();
+		log.atInfo().log("---------- factory pattern ----------");
 		testFactoryMethod();
+		log.atInfo().log("---------- adapter pattern ----------");
 		testAdapter();
-
+		log.atInfo().log("---------- strategy pattern ----------");
+		testStrategyPattern();
 	}
 
 	static void testSingleton() {
@@ -49,9 +54,7 @@ public class ResearchApplication {
 	static void testAdapter() {
 
 		Minivan minivan = new Minivan();
-
 		Helicopter helicopter = new Helicopter();
-
 		Vehicle helicopterAdapter = new HelicopterAdapter(helicopter);
 
 
@@ -65,14 +68,21 @@ public class ResearchApplication {
 		minivan.openDoors();
 		minivan.driveForward();
 
-
 		log.atInfo().log("HelicopterAdapter");
 		helicopterAdapter.assignDriver("pilot");
 		helicopterAdapter.driveForward();
 		helicopterAdapter.openDoors();
 
-
-
 	}
+
+
+	static void testStrategyPattern() {
+		Boat boat = new Boat();
+		CargoPlane plane = new CargoPlane();
+
+		log.atInfo().log("The boat {}", boat.tryingToFly());
+		log.atInfo().log("The plane {}", plane.tryingToFly());
+	}
+
 
 }
