@@ -18,6 +18,8 @@ import com.research.designpatterns.factory.VolkswagenFactory;
 import com.research.designpatterns.singleton.Singleton;
 import com.research.designpatterns.strategy.Boat;
 import com.research.designpatterns.strategy.CargoPlane;
+import com.research.designpatterns.template.Sandwich;
+import com.research.designpatterns.template.VegetarianSandwich;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -38,6 +40,8 @@ public class Application {
 		testStrategyPattern();
 		log.atInfo().log("---------- decorator pattern ----------");
 		testDecoratorPattern();
+		log.atInfo().log("---------- template pattern ----------");
+		testTemplatePattern();
 	}
 
 	static void testSingleton() {
@@ -78,9 +82,7 @@ public class Application {
 		helicopterAdapter.assignDriver("pilot");
 		helicopterAdapter.driveForward();
 		helicopterAdapter.openDoors();
-
 	}
-
 
 	static void testStrategyPattern() {
 		Boat boat = new Boat();
@@ -93,6 +95,11 @@ public class Application {
 	static void testDecoratorPattern() {
 		final Pizza pizza = new Mozzarella(new TomatoSauce(new PlainPizza()));
 		log.atInfo().log(pizza.getDescription());
+	}
+
+	static void testTemplatePattern() {
+		Sandwich vegetableSandwich = new VegetarianSandwich();
+		vegetableSandwich.makeSandwich();
 	}
 
 
