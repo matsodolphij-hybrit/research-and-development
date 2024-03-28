@@ -3,7 +3,7 @@ package com.research.designpatterns.composite;
 /**
  * What is the composite design pattern?
  * 1. Allows you to treat objects and composition of objects uniformly.
- * 2. They allow you to represent part-whole hierarchies.
+ * 2. They allow you to represent part-whole hierarchies. (any object in a collection is a part of the whole composition and composition as a whole is a collection of parts)
  * 2.1 Components can further be divided into smaller components
  * 3. You can structure data, or represent the inner working of every part of a while object individually.
 
