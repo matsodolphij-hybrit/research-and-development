@@ -6,7 +6,6 @@ package com.research.designpatterns.composite;
  * 2. They allow you to represent part-whole hierarchies. (any object in a collection is a part of the whole composition and composition as a whole is a collection of parts)
  * 2.1 Components can further be divided into smaller components
  * 3. You can structure data, or represent the inner working of every part of a while object individually.
-
  */
 public class SongListGenerator {
 
@@ -26,7 +25,7 @@ public class SongListGenerator {
         heavyMetal.add(new Song("-- heavy metal song name", "heavy metal song name", 2002));
         rock.add(new Song("  -- rock song name", "rock song name", 2001));
 
-        // sub component of rock
+        // subcomponent of rock
         SongComponent heavyRock = new SongGroup("  + Heavy rock sub category", "description");
         heavyRock.add(new Song("    -- This is the heaviest rock song ever", "description", 2017));
         rock.add(heavyRock);
