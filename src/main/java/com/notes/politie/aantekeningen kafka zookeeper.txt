@@ -1,0 +1,36 @@
+KAFKA ELK
+
+1) Start tutorial:
+https://kafka.apache.org/quickstart 
+The quick and dirty way of using the build in zookeeper can be prevented by installing and running zookeeper yourself, see the next step.
+
+2) Zelf zookeeper installeren en runnen:
+http://zookeeper.apache.org/releases.html
+https://medium.com/@shaaslam/installing-apache-zookeeper-on-windows-45eda303e835
+
+3) Extra informatie:
+https://sookocheff.com/post/kafka/kafka-in-a-nutshell/
+
+------------- hands on ----------------------------------------------------------
+
+Starting zookeeper
+(De windows path variable moet voorzien zijn van de zookeeper home var + bin)
+open cmd -> zkserver
+Server moet nu opstarten
+Het kan zijn dat je de server host moet aanpassen naar een andere poort dan 8080. Dit kan door het volgende toe te voegen in de zoo.cfg: admin.serverPort=8083 ipv de default 8080.
+
+Opstarten kafka standalone
+Navigeer: C:\Tools\kafka-2.3.0-src\bin
+open cmd -> bin\windows\kafka-server-start.bat ..\config\server.properties
+
+Opstarten kafka vanuit kafka tools intranet
+Run nl.politieintranet.kafka.Starter.java vanuit intellij - output toont de brokers.
+
+12:54:43.793 [main] INFO  nl.politieintranet.kafka.Starter - Embedded kafka started use kafkaBrokers 127.0.0.1:62914,127.0.0.1:62926,127.0.0.1:62941 to connect 
+
+------------------------------------------ Kafka interface ----------------------
+Kafka tool 2 (grafische interface)
+
+http://www.kafkatool.com/download.html
+
+Voor localhost is het nodig om de kafka brokers in te stellen voordat je connectie maakt met de server. Vul 127.0.0.1:62914,127.0.0.1:62926,127.0.0.1:62941 bij brokers.

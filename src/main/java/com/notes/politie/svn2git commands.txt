@@ -1,0 +1,32 @@
+svn2git https://svn.onehippo.org/repos/closed/projects/politieintranet --trunk /api-testsuite/trunk --nobranches --notags --verbose
+
+
+svn2git https://svn.onehippo.org/repos/closed/projects/politieintranet --trunk /cvdr-client/trunk --nobranches --notags --revision 195097:195102 --verbose
+
+svn2git https://svn.onehippo.org/repos/closed/projects/politieintranet --trunk /depersonalize-jcr-runner/trunk --nobranches --tags /depersonalize-jcr-runner/tags --revision 164591:164591 --verbose
+
+svn2git https://svn.onehippo.org/repos/closed/projects/politieintranet --trunk /devdata --nobranches --notags --revision 164605:164605 --verbose
+
+svn2git https://svn.onehippo.org/repos/closed/projects/politieintranet --trunk /hippo-pingservlet/trunk --nobranches --tags /hippo-pingservlet/tags --revision 204354:204514 --verbose
+
+svn2git https://svn.onehippo.org/repos/closed/projects/politieintranet --trunk /instagent/trunk --nobranches --notags --revision 216484:243364 --verbose
+
+svn2git https://svn.onehippo.org/repos/closed/projects/politieintranet --trunk /intranet-spnego-functional-test/trunk --nobranches --notags --revision 216484:217002 --verbose
+
+svn2git https://svn.onehippo.org/repos/closed/projects/politieintranet --trunk /jcr-runners/synchronize-namespace-content-jcr-runner/trunk --branches /jcr-runners/synchronize-namespace-content-jcr-runner/branches --tags /jcr-runners/synchronize-namespace-content-jcr-runner/tags --revision 164607:164607 --verbose
+
+svn2git https://svn.onehippo.org/repos/closed/projects/politieintranet --trunk /ldap-poc/trunk --nobranches --notags --revision 282513:282515 --verbose
+
+svn2git https://svn.onehippo.org/repos/closed/projects/politieintranet --trunk ldap-spring-security-poc --nobranches --notags --revision 170250:170251 --verbose
+
+svn2git https://svn.onehippo.org/repos/closed/projects/politieintranet --trunk /ontwikkelstraat/trunk --nobranches --notags --revision 206632:212651 --verbose
+
+svn2git https://svn.onehippo.org/repos/closed/projects/politieintranet --trunk /pkn-mock-web/trunk --branches /pkn-mock-web/branches --tags /pkn-mock-web/tags --revision 188817:283459 --verbose
+
+svn2git https://svn.onehippo.org/repos/closed/projects/politieintranet --trunk /politie-plus-client/trunk --tags /politie-plus-client/tags --branches /politie-plus-client/branches --revision 184031:261237 --verbose
+
+svn2git https://svn.onehippo.org/repos/closed/projects/politieintranet --trunk /smoketest/trunk --tags /smoketest/tags --branches /smoketest/branches --revision 168095:175007 --verbose
+
+svn2git https://svn.onehippo.org/repos/closed/projects/politieintranet --trunk /spring-security-kerberos-ntlm/trunk --notags --nobranches --revision 231685:234073 --verbose
+
+svn2git https://svn.onehippo.org/repos/closed/projects/politieintranet --trunk /test-automation/trunk --notags --nobranches --revision 176597:182412 --verbose
