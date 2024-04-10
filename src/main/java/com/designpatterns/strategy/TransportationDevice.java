@@ -8,6 +8,7 @@ import lombok.Setter;
  *  1. No code duplication
  *  2. No changing of the inheritance structure
  *      Is sonarqube whining that the inheritance tree is too large? Encapsulate behaviour using this strategy pattern instead.
+ *  3. Loose coupling
  *
  * When to use the strategy pattern?
  * 1. When you want to define a dclass that will have one behavior that is similar to other behaviors in a list ( like flying )
