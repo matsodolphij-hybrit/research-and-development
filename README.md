@@ -17,11 +17,11 @@ Solving coding kata's is a great way to showcase coding abilities and coding sty
 
 ### Completed
 - Fizzbuzz (https://codingdojo.org/kata/FizzBuzz/)
-
-### In progress
 - Cupcake (https://codingdojo.org/kata/cupcake/)
 - Eight queens (https://codingdojo.org/kata/eight-queens/)
 
+### In progress
+- depth first search (https://codingdojo.org/kata/DepthFirstSearch/)
 ---
 
 ## Notes
